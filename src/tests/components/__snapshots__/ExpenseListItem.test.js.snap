@@ -2,13 +2,13 @@
 
 exports[`should render ExpenseListItem with expense passed in 1`] = `
 <div>
-  <[object Object]
+  <Link
     to="/edit/1"
   >
     <h3>
       Gum
     </h3>
-  </[object Object]>
+  </Link>
   <p>
     $1.95
     -

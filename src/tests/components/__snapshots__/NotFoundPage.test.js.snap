@@ -3,10 +3,10 @@
 exports[`should render NotFoundPage 1`] = `
 <div>
   404 - 
-  <[object Object]
+  <Link
     to="/"
   >
     Go Home
-  </[object Object]>
+  </Link>
 </div>
 `;
