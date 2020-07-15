@@ -33,3 +33,31 @@ export const editExpense = (id, updates) => ({
   id,
   updates
 });
+
+export const setExpenses = (expenses) => ({
+  type: 'SET_EXPENSES',
+  expenses
+});
+
+// Starts the process of setting the expenses
+export const startSetExpenses = () => {
+
+  // dispatch makes this asynchronous
+  return (dispatch) => {
+
+    // ! we want a promise to be returned
+    return database.ref('expenses').once('value').then((snapshot) => {
+      const expenses = [];
+      // convert firebase return object into array of expenses
+      snapshot.forEach((childSnapshot) => {
+        expenses.push({
+          id: childSnapshot.key,
+          ...childSnapshot.val()
+        });
+      });
+
+      // once we get the array from firebase, save it to the redux store
+      dispatch(setExpenses(expenses));
+    });
+  };
+};
