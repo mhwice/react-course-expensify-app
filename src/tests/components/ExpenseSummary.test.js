@@ -11,11 +11,3 @@ test('should render ExpenseSummary correctly with many expense', () => {
   const wrapper = shallow(<ExpenseSummary expensesCount={22} expensesTotal={321231} />);
   expect(wrapper).toMatchSnapshot();
 });
-
-test('should correctly sum many expenses', () => {
-  
-});
-
-test('', () => {
-  
-});
