@@ -11,4 +11,4 @@ promise.then((data) => {
 	console.log(data);
 });
 
-console.log('after');
+console.log('aftesr');
