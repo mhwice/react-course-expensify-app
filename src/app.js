@@ -13,6 +13,8 @@ import LoadingPage from './components/LoadingPage';
 
 const store = configureStore();
 
+console.log('making sure git still works');
+
 const jsx = (
 	<Provider store={store}>
 		<AppRouter />
