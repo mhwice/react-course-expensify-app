@@ -13,7 +13,7 @@ import LoadingPage from './components/LoadingPage';
 
 const store = configureStore();
 
-console.log('making sure git still works');
+console.log('do i need to enter git credentials everytime?');
 
 const jsx = (
 	<Provider store={store}>
